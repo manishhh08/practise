@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/display',function(){
-    return view('display');
+/*defining route for pages
+Route::get('/home',[UserController::class,'addUser']);
+Route::get('/home',function(){return view ('home');    });*/
+Route::get('/',function(){
+    return view ('home');
 });
-Route::get('/home',[UserController::class,'index']);
+Route::get('/home/{id}',[UserController::class,'index']);

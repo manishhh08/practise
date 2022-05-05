@@ -9,12 +9,13 @@ use App\Models\User;//similar to include
 
 class UserController extends Controller
 {
-    public function index(){
-        echo 'here i m';
+    public function index (Request $request){
+        print_r($request -> route('id'));
         exit;
+        return view('welcome');
     }
-    public function addUser(){
-
+    public function addUser(Request $request){
+        
     }
     public function deleteUser(){
 
