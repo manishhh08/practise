@@ -22,4 +22,6 @@ Route::get('/home', function () {
 Route::get('/display',function(){
     return view('display');
 });
-Route::get('/home', [Us])
+Route::get('/home',function(){
+    return view('home');
+});
