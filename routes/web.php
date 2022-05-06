@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home',[UserController::class,'addUser']);
 Route::get('/home',function(){return view ('home');    });*/
 Route::get('/',function(){
-    return view ('display');
+    return view ('home');
 });
-Route::get('/display/{id}',[UserController::class,'namesurname']);
+Route::get('/home/user',[UserController::class,'namesurname']);
+Route::get('/',function(){
+    return view ('users.register');
+});
